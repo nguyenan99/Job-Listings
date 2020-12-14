@@ -14,6 +14,7 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/','Frontend\HomeController@index');
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'HomeAdminController@index')->name('home')->middleware('checkAdmin');
 });

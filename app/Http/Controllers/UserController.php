@@ -140,7 +140,7 @@ class UserController extends Controller
 
             ]
         );
-        $dataUpdate = $request->only('name','phone','email','about_user','skill','work_exp','address','');
+        $dataUpdate = $request->only('name','phone','email','about_user','skill','work_exp','address','education');
         if ($request->image)
         {
             $image = upload_image('image');

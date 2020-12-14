@@ -6,7 +6,7 @@
     <!-- Header Title Start -->
     <section class="inner-header-title blank">
         <div class="container">
-            <h1>Create Job</h1>
+            <h1>Edit Job</h1>
         </div>
     </section>
     <div class="clearfix"></div>

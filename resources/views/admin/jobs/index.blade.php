@@ -35,7 +35,6 @@
                             <th>Categories</th>
                             <th>Salary</th>
                             <th>Top Rated</th>
-                            <th>Actions</th>
 
                         </tr>
                         </thead>
@@ -51,13 +50,7 @@
                                 <td>{{$job->category_id}}</td>
                                 <td>{{$job->salary}}</td>
                                 <td>{{$job->top_rated}}</td>
-                                <td>
-                                    <a class="btn btn-xs btn-info" href="{{ route('jobs.edit',['id'=>$job->id]) }}">View/ Edit</a>
-                                    <a class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')" href="{{ route('categories.destroy',['id'=>$job->id]) }}" type="button" >
-                                        Delete
-                                    </a>
 
-                                </td>
 
                             </tr>
                         @endforeach

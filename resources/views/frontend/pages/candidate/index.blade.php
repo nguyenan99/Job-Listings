@@ -77,7 +77,6 @@
                     </div>
                 </div>
                 @endforeach
-                        {{$candidates->links()}}
 
             </div>
 

@@ -8,6 +8,6 @@ class HomeAdminController extends Controller
 {
     public function index()
     {
-        return view('layouts.admin');
+        return view('layouts.admin',['route_name' => 'Home-Admin']);
     }
 }

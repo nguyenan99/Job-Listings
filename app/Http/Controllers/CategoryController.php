@@ -69,7 +69,12 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|unique:category',
-        ]);
+        ],
+        [
+            'name.required'=>'Bạn phải nhập name',
+            'name.unique' => 'Tên đã tồn tại'
+        ]
+        );
         $data = $request->only(['name']);
         $category = Category::query()->create($data);
 

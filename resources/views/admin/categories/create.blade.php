@@ -1,6 +1,16 @@
 @extends("layouts.admin")
 
 @section("content")
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <div>{{$error}}</div>
+            @endforeach
+            </div>
+        @endif
+
+
     <div class="row">
         <div class="col-md-12">
             <div class="card card-info">
@@ -9,6 +19,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
+
                 <form class="form-horizontal" action="{{route('categories.store')}}" method="post">
                     @csrf
                     <div class="card-body">

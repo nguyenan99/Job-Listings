@@ -11,16 +11,16 @@
                     <form class="form-horizontal" action="{{route('get.search_job_result')}}" method="get">
                         <div class="col-md-4 no-padd">
                             <div class="input-group">
-                                <label style="color: white">Kỹ năng, công ty,...</label>
+                                <label style="color: white">Skills, companies, ...</label>
                                 <input type="text" class="form-control right-bor" id="joblist" name="like_search">
                             </div>
                         </div>
 
                         <div class="col-md-3 no-padd">
                             <div class="input-group">
-                                <Label style="color: white">Nghề nghiệp</Label>
+                                <Label style="color: white">Job</Label>
                                 <select id="choose-job" class="form-control" name="job_search[]" multiple="multiple">
-                                    <option >Tất cả ngành nghề</option>
+                                    <option>All</option>
                                     @foreach($categories as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach
@@ -31,9 +31,9 @@
 
                         <div class="col-md-3 no-padd">
                             <div class="input-group">
-                                <label style="color: white">Địa điểm</label>
+                                <label style="color: white">Location</label>
                                 <select id="choose-city" class="form-control" name="city_search[]" multiple="multiple">
-                                    <option>Tất cả địa điểm</option>
+                                    <option>All</option>
                                     @foreach($locations as $location)
                                     <option value="{{$location->id}}">{{$location->name}}</option>
                                     @endforeach

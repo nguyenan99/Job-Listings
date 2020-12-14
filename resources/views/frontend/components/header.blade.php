@@ -14,26 +14,25 @@
                 <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{auth()->user()->name}}</a>
                     <ul class="dropdown-menu" role="menu" >
-                        <li ><a href="{{route('get.profile')}}">Tài khoản</a></li>
-                        <li ><a href="{{route('get.applied')}}">Đã apply</a></li>
+                        <li ><a href="{{route('get.profile')}}">Account</a></li>
+                        <li ><a href="{{route('get.applied')}}">Applied</a></li>
                         @if(!isset(auth()->user()->company))
-                        <li ><a href="{{route('get.create_company')}}">Tạo hồ sơ công ty</a></li>
+                        <li ><a href="{{route('get.create_company')}}">Create a company profile</a></li>
                         @else
-                        <li ><a href="{{route('get.create_job')}}">Tạo job</a></li>
-                        <li ><a href="{{route('get.list_job')}}">Quản lý job</a></li>
+                        <li ><a href="{{route('get.create_job')}}">Create job</a></li>
+                        <li ><a href="{{route('get.list_job')}}">Job management</a></li>
 
-                        <li ><a href="{{route('get.candidates')}}">Ứng viên của tôi</a></li>
-                        <li ><a href="{{route('get.my_company')}}">Hồ sơ công ty</a></li>
+                        <li ><a href="{{route('get.candidates')}}">My candidates</a></li>
+                        <li ><a href="{{route('get.my_company')}}">Company profile</a></li>
 
                         @endif
 
-                        <li ><a href="{{route('logout')}}">Đăng xuất</a></li>
+                        <li ><a href="{{route('logout')}}">Log out</a></li>
                     </ul>
                 </li>
                 @else
-                <li><a href="blog.html">Tạo hồ sơ công ty</a></li>
                 <li><a href="{{route('get.signup')}}"><i class="fa fa-pencil" aria-hidden="true"></i>SignUp</a></li>
-                <li class="left-br"> <a href="{{route('get.login')}}" class="signin">Đăng nhập</a></li>
+                <li class="left-br"> <a href="{{route('get.login')}}" class="signin">Log in</a></li>
                 @endif
             </ul>
         </div>
